@@ -1,0 +1,31 @@
+// output 1 3 5 7 9
+// input 10
+#include <stdio.h>
+#include <stdlib.h>
+
+int Summation(int iNo)
+{
+
+    int iSum = 0;
+    int iCnt = 0;
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        iSum = iSum * iCnt;
+        return iSum;
+    }
+}
+
+int main(void)
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the Frequency:\n");
+    scanf("%d", &iValue);
+
+    iRet = Summation(iValue);
+    printf("Multiplication  is :%d\n", iRet);
+
+        return EXIT_SUCCESS;
+}

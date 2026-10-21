@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+// 4th Approach
+class program58 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int iValue = 0;
+
+        Iteration iteration = new Iteration();
+
+        System.out.println("Enter the Frequency:");
+        iValue = scanner.nextInt();
+
+        iteration.Displpay(iValue);
+
+        scanner.close();
+    }
+}
+
+class Iteration {
+
+    public void Displpay(int iNo) {
+
+        int iCnt = 0;
+        //Input Filter   input as -4 it says invalid input
+        if(iNo<=0)
+        {
+            System.out.println("Invalid Input");
+            return ;//does not return coz void
+
+        }
+       
+
+        for (iCnt = 1; iCnt <= iNo; iCnt++) {
+            System.out.println("Jay Ganesh!...");
+        }
+    }
+}

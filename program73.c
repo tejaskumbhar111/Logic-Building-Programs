@@ -1,0 +1,25 @@
+//output 1 * 2 * 3 * 4 *
+#include <stdio.h>
+#include <stdlib.h>
+
+void Display(int iNo)
+{
+    for (int iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf("%d\t*\t ", iCnt);
+    }
+
+    printf(" \n ");
+}
+
+int main(void)
+{
+    int iValue = 0;
+
+    printf("Enter the Frequency:\n");
+    scanf("%d", &iValue);
+
+    Display(iValue);
+
+    return EXIT_SUCCESS;
+}
