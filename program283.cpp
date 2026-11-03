@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Arithmatic // Encapsulation bcoz Class is there
+{
+public:
+    T No1;
+    T No2;
+
+    Arithmatic(T A, T B)
+    {
+        No1 = A;
+        No2 = B;
+    }
+
+    T Addition()
+    {
+        T Ans;
+        Ans = No1 + No2;
+        return Ans;
+    }
+
+    T Substraction()
+    {
+        T Ans;
+        Ans = No1 - No2;
+        return Ans;
+    }
+};
+
+int main()
+
+{
+    Arithmetic *aobj = NULL;       // Error
+    aobj = new Arithmetic(11, 10); // Error
+    cout << aobj->Addition() << endl;
+
+    return EXIT_SUCCESS;
+}

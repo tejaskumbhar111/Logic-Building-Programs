@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0;
+    int j = 0;
+
+    // Check whether matrix is square
+    if(iRow != iCol)
+    {
+        printf("Invalid Input\n");
+        return;
+    }
+
+    for(i = 1; i <= iRow; i++)  // Rows
+    {
+        for(j = 1; j <= iCol; j++)  // Columns
+        {
+            if(i == j)
+            {
+                printf("$\t");
+            }
+            else
+            {
+                printf("*\t");
+            }
+        }
+
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int iValue1 = 0;
+    int iValue2 = 0;
+
+    printf("Enter Number of Rows:\n");
+    scanf("%d", &iValue1);
+
+    printf("Enter Number of Columns:\n");
+    scanf("%d", &iValue2);
+
+    Pattern(iValue1, iValue2);
+
+    return EXIT_SUCCESS;
+}
